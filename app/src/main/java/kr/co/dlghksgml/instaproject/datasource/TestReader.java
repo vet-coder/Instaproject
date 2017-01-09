@@ -13,14 +13,17 @@ import kr.co.dlghksgml.instaproject.model.User;
 public class TestReader implements StoryDataReader {
     public ArrayList<StoryRowData> getStoryData(){
 
-        User user=new User("bacehee@gmail.com","이환희","test.jpg","안녕하세요. 이환희입니다.");
-        Story story=new Story("축하해주세요","제 생일입니다","2017-01-09","bacehee@gmail.com");
-
-        StoryRowData rowdata=new StoryRowData(story,user);
-
         ArrayList<StoryRowData> data_list=new ArrayList<StoryRowData>();
 
-        data_list.add(rowdata);
+        for(int i=0;i<5;i++){
+
+            User user=new User("bacehee@gmail.com","이환희","test.jpg","안녕하세요. 이환희입니다.");
+            Story story=new Story("축하해주세요","제 생일입니다","2017-01-09","bacehee@gmail.com");
+
+            StoryRowData rowdata=new StoryRowData(story,user);
+
+            data_list.add(rowdata);
+        }
 
         return data_list;
     }
